@@ -17,6 +17,8 @@
 
   </head>
 
+  <body background="https://github.com/warrec/shadowroll/blob/master/images/landing_background.jpg?raw=true">
+
   <body>
 
   	    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -37,12 +39,12 @@
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USER</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="#">My Account</a>
-              <a class="dropdown-item" href="#">Account Settings</a>
-              <a class="dropdown-item" href="#">Log Off</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#accountsettings">Account Settings</a>
+              <a class="dropdown-item" href="https://rawgit.com/warrec/shadowroll/master/index.html">Log Off</a>
             </div>
           </li>
-
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		
+            <a class="nav-link" href="https://rawgit.com/warrec/shadowroll/master/index.html">Home<span class="sr-only">(current)</span></a>
           </li>
                    
 
@@ -63,19 +65,103 @@
     	<br>
     	<br>
 
-      <div class="starter-template">
-        <h1>New Page</h1>
-        <p class="lead">Potentially use this as a template for future pages Chibu? :P</p>
+    	<!--User ID Image Card... Currently using sample image placeholder-->
 
+  	<div class="card" style="width: 15rem;">
+  		<p></p>
+
+  	<center>
+  	<img class="card-img-top" src="https://github.com/warrec/shadowroll/blob/master/images/sample_usericon.png?raw=true" alt="Card image cap" style="max-height: 50%; max-width: 50%">
+  	<div class="card-body">
+
+    <h4 class="card-title">(User)</h4>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#accountsettings">Account Settings</button>
+  	
+  		</div>
+	</div>
+</center>
+
+
+
+
+		<!--Account Settings Modal Popup-->
+
+		<div class="modal fade" id="accountsettings" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Account Settings</h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+
+        </button>
       </div>
 
+      <div class="modal-body">
+
+      		<!--Login Modal Code Continues Below Form Data-->
+
+     		<!--Start Login Form-->
+
+  <form>
+
+  	<div class="form-group">
+    	<label for="profileimageupload">Upload Profile Image</label>
+    	<input type="file" class="form-control-file" id="profileimageupload">
+  	</div>
+
+  	<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="changeusername" class="col-form-label">Change Username</label>
+      <input type="email" class="form-control" id="changeusername" placeholder="Leave Blank To Keep Current">
+    </div>
+  		</div>
+
+  	<div class="form-group">
+    	<label for="privacyselect" class="col-form-label">Privacy Settings</label>
+   	<div class="form-group col">
+   		<label for="privacyselect" class="col-form-label">Who Can See Me?</label>
+    	<select id="privacyselect" class="form-control">
+      		<option>Nobody</option>
+      		<option>Everybody</option>
+      		<option>Invited Friends Only</option>
+      		<option>Friends Of Friends</option>
+      	</select>
+      </div>
+  	</div>
+
+  	<div class="form-group">
+    <div class="form-check">
+      	<label class="form-check-label">
+        <input class="form-check-input" type="checkbox"> Send Me Email Updates
+      </label>
+    </div>
+  </div>
+
+	<a href="#"><small id="passwordchange" class="form-text text-muted">Change My Password</small></a>
+
+  </div>
+  </form>
+
+      <div class="modal-footer">
+                     
+      <a href="https://rawgit.com/warrec/shadowroll/master/page2.html" class="btn btn-primary" role="button">Save Changes
+
+      </a>
+
+      	<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        
+      	</div>
+    </div>
+  </div>
+</div>
+</div>
+
+		<!--ID Card Code Ends-->
+
     </main>
-
-    <!-- /.container -->
-
-  
-
-  	
 
     <!-- Optional JavaScript Area for Bootstrap -->
 
